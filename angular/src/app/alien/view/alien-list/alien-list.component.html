@@ -1,0 +1,29 @@
+<article class="text--justified">
+  <header><h2>Aliens</h2></header>
+
+  <table *ngIf="aliens">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let alien of aliens.aliens">
+      <td>{{alien.name}}</td>
+      <td>
+        <a [routerLink]="['/aliens', alien.id]">View</a>
+      </td>
+      <td>
+        <a [routerLink]="['/aliens', alien.id, 'edit']">Edit</a>
+      </td>
+      <td>
+        <button (click)="onDelete(alien)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/aliens/add']">Add a new alien</a>
+</article>

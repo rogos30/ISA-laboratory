@@ -1,0 +1,21 @@
+<article *ngIf="alien">
+  <header><h2>{{alien.name}}</h2></header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-2">
+          <div class="col-6">
+            Power:
+            <span>{{alien.power}}</span>
+          </div>
+          <div class="col-6">
+            Mothership:
+            <span>{{alien.mothership.name}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+

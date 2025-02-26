@@ -1,0 +1,29 @@
+<article class="text--justified">
+  <header><h2>Motherships</h2></header>
+
+  <table *ngIf="motherships">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let mothership of motherships.motherships">
+      <td>{{mothership.name}}</td>
+      <td>
+        <a [routerLink]="['/motherships', mothership.id]">View</a>
+      </td>
+      <td>
+        <a [routerLink]="['/motherships', mothership.id, 'edit']">Edit</a>
+      </td>
+      <td>
+        <button (click)="onDelete(mothership)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/motherships/add']">Add a new mothership</a>
+</article>

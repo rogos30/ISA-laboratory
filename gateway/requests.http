@@ -1,0 +1,114 @@
+### Create a new mothership
+PUT http://localhost:8080/api/motherships/ac4e2683-b2ba-4695-94d9-806a97fce71e
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "Farmers",
+  "power": 250
+}
+
+### Create a new mothership
+PUT http://localhost:8080/api/motherships/1584a9da-f3de-48a1-aee1-2123fa5ec98a
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+"name": "Raiders",
+"power": 500
+}
+
+### Create a new mothership
+PUT http://localhost:8080/api/motherships/13f6a3fe-aaca-4673-a50b-bffcf90ca175
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+"name": "Pacifists",
+"power": 300
+}
+
+### Create a new alien
+PUT http://localhost:8080/api/aliens/2f3b4d13-9796-405f-bde8-86121758929f
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "Zeke",
+  "power": 14,
+  "mothershipId": "1584a9da-f3de-48a1-aee1-2123fa5ec98a"
+}
+
+### Create a new alien
+PUT http://localhost:8080/api/aliens/3dd4e2cb-ccc9-4096-8dcf-305ce8e251de
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "Bruun",
+  "power": 5,
+  "mothershipId": "13f6a3fe-aaca-4673-a50b-bffcf90ca175"
+}
+
+### Create a new alien
+PUT http://localhost:8080/api/aliens/49391e56-500a-408b-aed8-add13117bed7
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "Bob",
+  "power": 10,
+  "mothershipId": "1584a9da-f3de-48a1-aee1-2123fa5ec98a"
+}
+
+### Create a new alien
+PUT http://localhost:8080/api/aliens/1c38d850-c0ab-40b1-9953-daede56d1c87
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "Rava",
+  "power": 3,
+  "mothershipId": "13f6a3fe-aaca-4673-a50b-bffcf90ca175"
+}
+
+### Create a new alien
+PUT http://localhost:8080/api/aliens/3c6f1eb1-8069-44ab-988f-d7fed2b65d86
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "Sigrid",
+  "power": 18,
+  "mothershipId": "ac4e2683-b2ba-4695-94d9-806a97fce71e"
+}
+
+### Get all aliens
+GET http://localhost:8080/api/aliens
+
+### Get single alien
+GET http://localhost:8080/api/aliens/2f3b4d13-9796-405f-bde8-86121758929f
+
+### Get single alien, not existing
+GET http://localhost:8080/api/aliens/3c6f1eb1-8069-44ab-988f-d7fed2b65d87
+
+### Get mothership aliens
+GET http://localhost:8080/api/motherships/1584a9da-f3de-48a1-aee1-2123fa5ec98a/aliens
+
+### Get mothership aliens, not existing
+GET http://localhost:8080/api/motherships/ac4e2683-b2ba-4695-94d9-806a97fce71f/aliens
+
+### Delete alien.
+DELETE http://localhost:8080/api/aliens/3c6f1eb1-8069-44ab-988f-d7fed2b65d86
+
+### Delete mothership
+DELETE http://localhost:8080/api/motherships/1584a9da-f3de-48a1-aee1-2123fa5ec98a
+
+### Get all motherships
+GET http://localhost:8080/api/motherships
+
+### Get single mothership
+GET http://localhost:8080/api/motherships/13f6a3fe-aaca-4673-a50b-bffcf90ca175
+
+### Get single mothership, not existing
+GET http://localhost:8080/api/motherships/ac4e2683-b2ba-4695-94d9-806a97fce71f

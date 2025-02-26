@@ -1,0 +1,31 @@
+### Get all aliens
+GET http://localhost:8081/api/aliens
+
+### Get single alien
+GET http://localhost:8081/api/aliens/2f3b4d13-9796-405f-bde8-86121758929f
+
+### Get single alien, not existing
+GET http://localhost:8081/api/aliens/3c6f1eb1-8069-44ab-988f-d7fed2b65d87
+
+### Get mothership aliens
+GET http://localhost:8081/api/motherships/1584a9da-f3de-48a1-aee1-2123fa5ec98a/aliens
+
+### Get mothership aliens, not existing
+GET http://localhost:8081/api/motherships/ac4e2683-b2ba-4695-94d9-806a97fce71e/aliens
+
+### Create a new alien
+PUT http://localhost:8081/api/aliens/3c6f1eb1-8069-44ab-988f-d7fed2b65d87
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "Sigrid",
+  "power": 18,
+  "mothershipId": "1584a9da-f3de-48a1-aee1-2123fa5ec98a"
+}
+
+### Delete alien.
+DELETE http://localhost:8081/api/aliens/3c6f1eb1-8069-44ab-988f-d7fed2b65d87
+
+### Delete mothership
+DELETE http://localhost:8081/api/motherships/1584a9da-f3de-48a1-aee1-2123fa5ec98a

@@ -1,0 +1,21 @@
+### Get all motherships
+GET http://localhost:8082/api/motherships
+
+### Get single mothership
+GET http://localhost:8082/api/motherships/1584a9da-f3de-48a1-aee1-2123fa5ec98a
+
+### Get single mothership, not existing
+GET http://localhost:8082/api/motherships/ac4e2683-b2ba-4695-94d9-806a97fce71e
+
+### Delete mothership
+DELETE http://localhost:8082/api/motherships/1584a9da-f3de-48a1-aee1-2123fa5ec98a
+
+### Create a new mothership
+PUT http://localhost:8082/api/motherships/ac4e2683-b2ba-4695-94d9-806a97fce71e
+Content-Type: application/json
+Authorization: Basic a2V2aW46dXNlcnVzZXI=
+
+{
+  "name": "Farmers",
+  "power": 250
+}
